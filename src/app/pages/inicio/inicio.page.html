@@ -1,0 +1,27 @@
+<app-header titulo="Pagina Inicio"> 
+
+</app-header>
+
+<ion-content>
+
+  <!-- <ion-button   routerLink="/action-sheet"  expand="block"  shape="round">
+    Ir a Action-Sheet
+  </ion-button>
+  <div></div>
+  <ion-button   routerLink="/check"  expand="block"  shape="round">
+    Ir a Check
+  </ion-button>
+  <div> </div>
+  <ion-button   routerLink="/listing-sliding"  expand="block"  shape="round">
+    Ir a Listing-Sliding
+  </ion-button> -->
+
+  <ion-list>
+    <ion-item *ngFor="let c of componentes" [routerLink]="c.redirectTo">
+      <ion-icon slot="start" [name]="c.icono"></ion-icon>
+      {{c.nombre}}
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+
